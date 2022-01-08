@@ -98,15 +98,23 @@ function addTodo(todo) {
 
 function CreateCuadro (Dia){
     if(Dia == true){
-        const real = document.createElement("div")
-        real.classList.add("real-green")
-        real.classList.add("real")
-        containerReal.appendChild(real) 
-        real.classList.add("indicador")
-            } else {
-        const real = document.createElement("div")
-        real.classList.add("real-red")
-        real.classList.add("real")
+        // const real = document.createElement("div")
+        // real.classList.add("real-green")
+        // real.classList.add("real")
+        // containerReal.appendChild(real) 
+        // real.classList.add("indicador")
+        const real = document.createElement("i")
+        real.classList.add("far")
+        real.classList.add("fa-check-circle")
+        containerReal.appendChild(real)
+        } else {
+        // const real = document.createElement("div")
+        // real.classList.add("real-red")
+        // real.classList.add("real")
+        // containerReal.appendChild(real)
+        const real = document.createElement("i")
+        real.classList.add("far")
+        real.classList.add("fa-times-circle")
         containerReal.appendChild(real)
     }
 }
@@ -133,8 +141,11 @@ btnReset.addEventListener("click",()=>{
     console.log("tareas completadas" + count)
     console.log("cantidad de tareas" + countTodo)
 
-    count = 0;
-    countTodo = 0;
+    if (count == countTodo) {
+        count = 0
+        countTodo = 0;
+    }
+    //count = 0;
 
     todoCount.innerText = count;
     updateLS()

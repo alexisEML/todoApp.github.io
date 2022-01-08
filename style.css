@@ -82,13 +82,13 @@ small {
 
 #container-real{
     display: flex;
-    background-color: blue;
+    background-color: #1d1b80;
     width: 90%;
     padding: 10px;   
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 8px;
     
 }
 
@@ -102,4 +102,13 @@ small {
     height: 40px;
     background-color: red;
     
+}
+
+.fa-check-circle{
+    font-size: 40px;
+    color: white;
+}
+.fa-times-circle{
+    font-size: 40px;
+    color: white;
 }
